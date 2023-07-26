@@ -10,7 +10,7 @@ This project has adopted this [Code of Conduct](CODE_OF_CONDUCT.md).
 
 If you want to contribute please file a **New issue** [Issues](https://github.com/xoap-io/XOAPW11SecurityBaseline22H2DSC/issues). Before doing so, please have a look at the [Contributing Guidelines](CONTRIBUTING.md). 
 
-## Change log and Releases
+## Changelog and Releases
 
 A full list of changes in each version can be found in the [Releases](https://github.com/xoap-io/XOAPW11SecurityBaseline22H2DSC/releases).
 
@@ -21,3 +21,26 @@ If you want to manually integrate the DSC Module on your node, copy the contents
 Be sure to adjust the path to your needs and the versions of the modules.
 
 If you want to use it with [XOAP](https://xoap.io) and config.XO. Upload the zip-file from the releases page to your config.XO Workspace. See [XOAP Documentation](https://docs.xoap.io/configuration-management/overview/modules/add-modules/) for more information.
+
+## Adding new resources
+
+Please install Plaster first and make sure it's present.
+
+```powershell
+Install-Module Plaster
+Import-Module Plaster
+```
+
+### Create new DSC resources
+
+DSC resources can easily be deployed via the invocation of
+
+```powershell
+.\New-CompositeResource.ps1
+```
+
+with parameters
+
+```powershell
+.\New-CompositeResource.ps1 -Module XOAPW11SecurityBaseline22H2DSC -Version 0.0.1 -Resource ScheduledTasks
+```
