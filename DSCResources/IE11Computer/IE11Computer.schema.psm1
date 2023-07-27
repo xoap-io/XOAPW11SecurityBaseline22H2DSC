@@ -38,6 +38,7 @@ https://www.powershellgallery.com/packages/WindowsDefender/1.0.0.4
 Configuration Windows_11_v22H2_Security_Baseline_IE11
 {
 
+    Import-DSCResource -ModuleName 'PSDesiredStateConfiguration'
     Import-DSCResource -ModuleName 'GPRegistryPolicyDsc' -ModuleVersion '1.2.0'
     Import-DSCResource -ModuleName 'AuditPolicyDSC' -ModuleVersion '1.4.0.0'
     Import-DSCResource -ModuleName 'SecurityPolicyDSC' -ModuleVersion '2.10.0.0'
