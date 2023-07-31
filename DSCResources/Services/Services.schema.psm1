@@ -40,6 +40,7 @@ configuration Services
 
     Import-DSCResource -ModuleName PSDesiredStateConfiguration
 
+    <#
     Registry disableInsecureCipher_a
     {
         Key       = 'HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Ciphers\DES 56/56'
@@ -49,4 +50,5 @@ configuration Services
         Ensure    = 'Present'
         Force     = $true
     }
+    #>
 }
